@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 :root{
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
@@ -14,23 +7,47 @@
   --dark-blue: hsl(223, 47%, 23%);
 }
 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body{
   background-image: url(./img/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--pale-blue);
-  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 .card{
   width: 450px;
-  background-color: white;
+  background: white;
   color: var(--desaturated-blue);
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.container{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.container > * {
+  margin: 13px 0;
 }
 
 .title{
-  color: var(--dark-blue);
   font-size: 32px;
+  color: var(--dark-blue);
   font-weight: 900;
 }
 
@@ -38,6 +55,68 @@ body{
   width: 100%;
 }
 
-.container{
-  padding: 30px;
+.description{
+  line-height: 25px;
 }
+
+.plan-description{
+  line-height: 20px;
+  margin-right: 75px;
+}
+
+button{
+  border: none;
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.proceed-button{
+  padding: 1rem 0;
+  background: var(--bright-blue);
+  color: white;
+  box-shadow: 0 20px 30px -8px rgb(197 189 245);
+  border-radius: 12px;
+}
+
+.proceed-button:hover{
+  opacity: 0.8;
+}
+
+.cancel-button{
+  background: white;
+  color: var(--desaturated-blue);
+  margin-top: 22px;
+}
+
+.cancel-button:hover{
+  color: black;
+}
+
+.plan-container{
+  font-size: 16px;
+  padding: 25px;
+  border-radius: 12px;
+  background: var(--very-pale-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-container a {
+  color: var(--bright-blue);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.plan-container a:hover{
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.plan-container strong{
+  color: var(--dark-blue);
+}
+
